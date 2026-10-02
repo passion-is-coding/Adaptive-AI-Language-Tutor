@@ -6,7 +6,6 @@ from app.schemas.chat import ChatRequest, ChatResponse
 from app.tutor.analyzer import StudentAnalyzer
 from app.tutor.service import TutorService
 
-
 router = APIRouter(prefix="/chat", tags=["Chat"])
 
 

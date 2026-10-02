@@ -15,7 +15,6 @@ class LLMResponse:
 
 
 class LLMProvider(ABC):
-
     @abstractmethod
     async def generate(self, request: LLMRequest) -> LLMResponse:
         raise NotImplementedError

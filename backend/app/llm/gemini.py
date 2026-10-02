@@ -6,11 +6,8 @@ from app.llm.base import LLMProvider, LLMRequest, LLMResponse
 
 
 class GeminiProvider(LLMProvider):
-
     def __init__(self, settings: Settings):
-        self.client = genai.Client(
-            api_key=settings.gemini_api_key
-        )
+        self.client = genai.Client(api_key=settings.gemini_api_key)
         self.model = settings.gemini_model
 
     async def generate(self, request: LLMRequest) -> LLMResponse:

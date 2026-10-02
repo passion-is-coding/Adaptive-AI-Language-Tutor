@@ -10,7 +10,6 @@ class StudentAnalysis:
 
 
 class StudentAnalyzer:
-
     def analyze(
         self,
         text: str,
@@ -29,10 +28,7 @@ class StudentAnalyzer:
         else:
             response_length = "long"
 
-        suggest_expansion = (
-            word_count < 4
-            and current_level in {"B1", "B2", "C1"}
-        )
+        suggest_expansion = word_count < 4 and current_level in {"B1", "B2", "C1"}
 
         return StudentAnalysis(
             word_count=word_count,

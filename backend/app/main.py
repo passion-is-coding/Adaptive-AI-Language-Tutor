@@ -4,7 +4,7 @@ from fastapi import FastAPI
 
 from app.api.v1.chat import router as chat_router
 from app.core.config import get_settings
-
+from app.api.v1.students import router as students_router
 
 settings = get_settings()
 
@@ -26,6 +26,7 @@ app = FastAPI(
 
 app.include_router(
     chat_router,
+    students_router,
     prefix="/api/v1",
 )
 

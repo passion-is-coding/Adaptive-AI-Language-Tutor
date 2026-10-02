@@ -6,7 +6,6 @@ from app.tutor.analyzer import StudentAnalyzer
 
 
 class TutorService:
-
     def __init__(
         self,
         llm: LLMProvider,
